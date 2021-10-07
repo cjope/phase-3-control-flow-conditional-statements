@@ -15,7 +15,7 @@ def hows_the_weather(temperature)
   #   "brisk"
   # # when (40..65)
   # # when >= 40 && <= 65 #why though??>
-  # when temperature >=40 && temperature <= 65 #ok then what??
+  # when temperature >=40 && temperature <= 65
   # # when (40..65)
   #   "a little chilly"
   # when >85
@@ -25,7 +25,7 @@ def hows_the_weather(temperature)
   # end
   if temperature < 40
     "It's brisk out there!"
-  elsif temperature >= 40 && temperature <=65
+  elsif (40...65).include?(temperature)
     "It's a little chilly out there!"
   elsif temperature >85
     "It's too dang hot out there!"
@@ -33,7 +33,7 @@ def hows_the_weather(temperature)
     "It's perfect out there!"
   end
   # "It's #{response} out there!"
-  # I don;t like that. What is up with ranges? Why can't I use a range??
+
 end
 
 def fizzbuzz(num)
